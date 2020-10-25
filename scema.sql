@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS myCompany_DB;
 CREATE DATABASE myCompany_DB;
 
 USE myCompany_DB;
@@ -12,7 +13,7 @@ CREATE TABLE roles(
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(30) NOT NULL,
   salary DECIMAL(7,2),
-  department_id INT NOT NULL,
+  department_id INT default NOT NULL,
   PRIMARY KEY (id)
 );
 CREATE TABLE employee(
