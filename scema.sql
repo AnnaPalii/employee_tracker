@@ -9,18 +9,13 @@ CREATE TABLE department (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE roles(
-  id INT NOT NULL AUTO_INCREMENT,
-  title VARCHAR(30) NOT NULL,
-  salary DECIMAL(7,2),
-  department_id INT default NOT NULL,
-  PRIMARY KEY (id)
-);
-CREATE TABLE employee(
-  id INT NOT NULL AUTO_INCREMENT,
-  first_name VARCHAR(30) NOT NULL,
-  last_name VARCHAR(30) NOT NULL,
-  role_id INT default 0,
-  manager_id INT default NULL,
-  PRIMARY KEY (id)
+CREATE TABLE employee (
+id INTEGER(11) AUTO_INCREMENT NOT NULL,
+first_name VARCHAR (30) NOT NULL,
+last_name VARCHAR(30) NOT NULL,
+title VARCHAR (30) NOT NULL,
+department VARCHAR(20) NOT NULL,
+salary INTEGER(7),
+manager VARCHAR(20) ,
+primary key (id)
 );
